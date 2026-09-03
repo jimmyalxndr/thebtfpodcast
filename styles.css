@@ -21,18 +21,19 @@ section{padding:52px 0}
 .section-head{display:flex;justify-content:space-between;align-items:end;border-bottom:1px solid var(--line);padding-bottom:12px;margin-bottom:24px;gap:16px}
 .section-head h2{margin:0;text-transform:uppercase;font-size:26px}
 .section-head a{color:var(--muted);font-size:13px;letter-spacing:.08em;text-transform:uppercase}
-.latest{display:grid;grid-template-columns:300px 1fr;gap:28px;background:var(--bg2);border:1px solid var(--line);padding:22px}
-.latest img{width:100%;aspect-ratio:1;object-fit:cover}
+.latest{display:grid;grid-template-columns:340px 1fr;gap:28px;background:var(--bg2);border:1px solid var(--line);padding:22px}
+.latest img{width:100%;aspect-ratio:16/9;object-fit:cover}
 .meta{color:var(--muted);font-size:13px;letter-spacing:.08em;text-transform:uppercase;margin:0 0 10px}
 .latest h3{margin:0 0 12px;font-size:26px;line-height:1.15}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
 .card{background:var(--bg2);border:1px solid var(--line);display:flex;flex-direction:column}
-.card img{width:100%;aspect-ratio:1;object-fit:cover}
+.card img{width:100%;aspect-ratio:16/9;object-fit:cover}
 .card .body{padding:14px;display:flex;flex-direction:column;gap:8px}
 .card h3{margin:0;font-size:16px;line-height:1.25}
 .card p{margin:0;color:var(--muted);font-size:14px}
 .split{display:grid;grid-template-columns:1fr 1fr;gap:20px}
 .host,.panel{background:var(--bg2);border:1px solid var(--line);padding:26px}
+.host img{width:100%;aspect-ratio:16/9;object-fit:cover;margin:0 0 16px}
 .host h3,.panel h3{margin:0 0 8px;text-transform:uppercase}
 .host p,.panel p{color:var(--soft)}
 .page-hero{padding:56px 0 16px}
@@ -54,6 +55,7 @@ footer{border-top:1px solid var(--line);padding:36px 0 48px;color:var(--muted);f
 .foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 .foot a{margin-right:14px}
 .guest-grid{display:grid;gap:20px}
-.guest-card{display:grid;grid-template-columns:160px 1fr;gap:24px;background:var(--bg2);border:1px solid var(--line);padding:22px}
+.guest-card{display:grid;grid-template-columns:220px 1fr;gap:24px;background:var(--bg2);border:1px solid var(--line);padding:22px}
+.guest-card img{width:100%;aspect-ratio:16/9;object-fit:cover}
 .badge{display:inline-block;border:1px solid var(--line);padding:4px 8px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0 0 10px}
 @media(max-width:800px){.hero,.latest,.ep,.split,.guest-card{grid-template-columns:1fr}.hero-art{width:180px;height:180px}nav{display:none}}
