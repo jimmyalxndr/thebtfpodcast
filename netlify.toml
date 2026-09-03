@@ -1,0 +1,23 @@
+[build]
+  command = "python3 build.py"
+  publish = "dist"
+
+[build.environment]
+  PYTHON_VERSION = "3.11"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[redirects]]
+  from = "/feed"
+  to = "https://media.rss.com/behind-the-facade/feed.xml"
+  status = 302
+
+[[redirects]]
+  from = "/watch"
+  to = "https://www.youtube.com/@BehindTheFacadeShow"
+  status = 302
