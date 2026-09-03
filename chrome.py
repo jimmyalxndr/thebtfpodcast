@@ -53,7 +53,7 @@ def render_home(latest, rest, hosts, guests, count):
         )
     return (
         '<main>'
-        '<section class="stage"><div class="stage-bg" style="background-image:url(\'' + bg + '\')"></div>'
+        '<section class="stage"><div class="stage-bg" style="background-image:url(/cover.jpg)"></div>'
         '<div class="stage-shade"></div><div class="wrap stage-copy">'
         '<p class="kicker">Melbourne construction podcast</p>'
         '<h1>Behind <em>the</em> Facade</h1>'
