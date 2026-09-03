@@ -7,6 +7,7 @@ from xml.etree import ElementTree as ET
 from site_config import COVER_URL, ITUNES, RSS_URL, SHOW, SITE
 from content import ARTICLES, GUESTS, HOSTS, YOUTUBE
 from thumbs import pull_thumb
+from article_pages import write_articles
 
 ROOT = Path(__file__).resolve().parent
 DIST = ROOT / 'dist'
@@ -83,7 +84,7 @@ def card(ep):
 def layout(title, path, description, body, image='/cover.jpg'):
     abs_img = image if image.startswith('http') else SITE + image
     page = title if title == SHOW['title'] else title + ' | ' + SHOW['title']
-    return ('<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>' + html.escape(page) + '</title><meta name="description" content="' + html.escape(description) + '"><link rel="canonical" href="' + SITE + path + '"><link rel="icon" href="/cover.jpg"><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&display=swap" rel="stylesheet"><meta property="og:title" content="' + html.escape(title) + '"><meta property="og:image" content="' + html.escape(abs_img) + '"><link rel="stylesheet" href="/styles.css"></head><body><header><div class="wrap nav"><a class="brand" href="/"><img src="/cover.jpg" alt="">Behind the Facade</a><nav><a href="/episodes/">Episodes</a><a href="/hosts/">Hosts</a><a href="/guests/">Guests</a><a href="/pitch/">Be a guest</a><a href="' + SHOW['youtube'] + '" target="_blank" rel="noreferrer">YouTube</a></nav></div></header>' + body + '<footer><div class="wrap foot"><div><strong style="color:#fff">Behind the Facade</strong><div>Melbourne construction podcast - Jake Gorry and Daniel Alizzi</div></div><div><a href="' + SHOW['spotify'] + '">Spotify</a><a href="' + SHOW['apple'] + '">Apple</a><a href="' + SHOW['youtube'] + '">YouTube</a><a href="/feed">RSS</a></div></div></footer></body></html>')
+    return ('<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>' + html.escape(page) + '</title><meta name="description" content="' + html.escape(description) + '"><link rel="canonical" href="' + SITE + path + '"><link rel="icon" href="/cover.jpg"><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&display=swap" rel="stylesheet"><meta property="og:title" content="' + html.escape(title) + '"><meta property="og:image" content="' + html.escape(abs_img) + '"><link rel="stylesheet" href="/styles.css"></head><body><header><div class="wrap nav"><a class="brand" href="/"><img src="/cover.jpg" alt="">Behind the Facade</a><nav><a href="/episodes/">Episodes</a><a href="/articles/">Articles</a><a href="/hosts/">Hosts</a><a href="/guests/">Guests</a><a href="/pitch/">Be a guest</a><a href="' + SHOW['youtube'] + '" target="_blank" rel="noreferrer">YouTube</a></nav></div></header>' + body + '<footer><div class="wrap foot"><div><strong style="color:#fff">Behind the Facade</strong><div>Melbourne construction podcast - Jake Gorry and Daniel Alizzi</div></div><div><a href="' + SHOW['spotify'] + '">Spotify</a><a href="' + SHOW['apple'] + '">Apple</a><a href="' + SHOW['youtube'] + '">YouTube</a><a href="/feed">RSS</a></div></div></footer></body></html>')
 
 def article_html(ep):
     art = ep.get('article') or {}
@@ -148,6 +149,7 @@ def build():
     put(DIST / 'guests/index.html', layout('Guests', '/guests/', 'Guests of Behind the Facade.', guests_page))
     pitch = ('<main class="wrap" style="padding-bottom:72px"><div class="page-hero"><p class="kicker">Bookings</p><h1>Be a guest</h1><p class="lede">If you run a construction business, lead a trade, or have a story that is actually useful on site, send it through.</p></div><form name="guest" method="POST" data-netlify="true" netlify-honeypot="bot-field"><input type="hidden" name="form-name" value="guest"><p style="display:none"><label>Do not fill this out <input name="bot-field"></label></p><label>Name <input type="text" name="name" required></label><label>Email <input type="email" name="email" required></label><label>Company / role <input type="text" name="company"></label><label>Why this conversation <textarea name="pitch" required></textarea></label><button class="btn" type="submit">Send pitch</button></form></main>')
     put(DIST / 'pitch/index.html', layout('Be a guest', '/pitch/', 'Pitch a guest for Behind the Facade.', pitch))
+    write_articles(DIST, layout)
     print('Built', len(episodes), 'episodes')
 
 if __name__ == '__main__':
