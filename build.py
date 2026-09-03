@@ -6,6 +6,7 @@ from pathlib import Path
 from xml.etree import ElementTree as ET
 from site_config import COVER_URL, ITUNES, RSS_URL, SHOW, SITE
 from content import ARTICLES, GUESTS, HOSTS, YOUTUBE
+from thumbs import pull_thumb
 
 ROOT = Path(__file__).resolve().parent
 DIST = ROOT / 'dist'
@@ -59,7 +60,8 @@ def fetch():
             'dateLabel': date_label(item.findtext('pubDate')),
             'duration': duration(item.findtext(ITUNES + 'duration') or '0'),
             'audioUrl': enc.get('url') if enc is not None else '',
-            'image': img.get('href') if img is not None else '/cover.jpg',
+            'rssImage': img.get('href') if img is not None else '/cover.jpg',
+            'image': '/cover.jpg',
             'descriptionHtml': desc,
             'excerpt': article.get('deck') or excerpt(plain(desc)),
             'article': article,
@@ -107,10 +109,18 @@ def build():
         (DIST / 'cover.jpg').write_bytes(res.read())
     (DIST / 'styles.css').write_text(CSS, encoding='utf-8')
     episodes = fetch()
+    thumbs = DIST / 'thumbs'
+    thumbs.mkdir()
+    for ep in episodes:
+        dest = thumbs / (ep['episode'] + '.jpg')
+        if ep['youtube'] and pull_thumb(ep['youtube'], dest):
+            ep['image'] = '/thumbs/' + ep['episode'] + '.jpg'
+        else:
+            ep['image'] = ep.get('rssImage') or '/cover.jpg'
     latest, rest = episodes[0], episodes[1:7]
     guest_cards = ''
     for g in GUESTS:
-        guest_cards += ('<div class="host"><p class="kicker">Episode ' + html.escape(g['episode']) + '</p><h3>' + html.escape(g['name']) + '</h3><p>' + html.escape(g['summary']) + '</p><a class="btn ghost" href="/guests/">Read the write-up</a></div>')
+        guest_cards += ('<div class="host"><img src="/thumbs/' + g['episode'] + '.jpg" alt=""><p class="kicker">Episode ' + html.escape(g['episode']) + '</p><h3>' + html.escape(g['name']) + '</h3><p>' + html.escape(g['summary']) + '</p><a class="btn ghost" href="/guests/">Read the write-up</a></div>')
     home = ('<main><section class="wrap hero"><img class="hero-art" src="/cover.jpg" alt=""><div><p class="kicker">Construction podcast - Melbourne - @BehindTheFacadeShow</p><h1>Behind<br>the Facade</h1><p class="lede">' + SHOW['tagline'] + '</p>' + buttons() + '</div></section><section class="wrap"><div class="section-head"><h2>Latest episode</h2><a href="/episodes/">All episodes</a></div><article class="latest"><img src="' + html.escape(latest['image']) + '" alt=""><div><p class="meta">Episode ' + html.escape(latest['episode']) + ' - ' + html.escape(latest['dateLabel']) + ' - ' + html.escape(latest['duration']) + '</p><h3><a href="/episodes/' + latest['slug'] + '/">' + html.escape(latest['title']) + '</a></h3><p>' + html.escape(latest['excerpt']) + '</p><div class="btns"><a class="btn" href="/episodes/' + latest['slug'] + '/">Read and play</a><a class="btn ghost" href="' + SHOW['youtube'] + '" target="_blank" rel="noreferrer">Watch on YouTube</a></div></div></article></section><section class="wrap"><div class="section-head"><h2>Recent</h2></div><div class="grid">' + ''.join(card(e) for e in rest) + '</div></section><section class="wrap"><div class="section-head"><h2>The hosts</h2><a href="/hosts/">Full bios</a></div><div class="split"><div class="host"><p class="kicker">Host</p><h3>Jake Gorry</h3><p>' + html.escape(HOSTS[0]['summary']) + '</p><a class="btn ghost" href="/hosts/">Jake</a></div><div class="host"><p class="kicker">Host</p><h3>Daniel Alizzi</h3><p>' + html.escape(HOSTS[1]['summary']) + '</p><a class="btn ghost" href="/hosts/">Daniel</a></div></div></section><section class="wrap"><div class="section-head"><h2>Guests</h2><a href="/guests/">All guests</a></div><div class="split">' + guest_cards + '</div></section></main>')
     put(DIST / 'index.html', layout(SHOW['title'], '/', SHOW['description'], home))
     archive = ('<main class="wrap"><div class="page-hero"><p class="kicker">Archive</p><h1>Episodes</h1><p class="lede">Every conversation as a long-form note, with audio on this site and video on YouTube.</p></div><div class="grid" style="padding-bottom:64px">' + ''.join(card(e) for e in episodes) + '</div></main>')
@@ -133,7 +143,7 @@ def build():
     put(DIST / 'about/index.html', layout('About', '/about/', SHOW['description'], about))
     guest_blocks = ''
     for g in GUESTS:
-        guest_blocks += ('<article class="guest-card"><div><p class="badge">Episode ' + html.escape(g['episode']) + '</p><h2 style="margin:0 0 8px;text-transform:uppercase">' + html.escape(g['name']) + '</h2><p class="meta">' + html.escape(g['title']) + ' - ' + html.escape(g['company']) + '</p></div><div>' + g['body'] + '<div class="btns"><a class="btn" href="/episodes/">Find the episode</a><a class="btn ghost" href="' + g['url'] + '" target="_blank" rel="noreferrer">Company</a><a class="btn ghost" href="' + g['linkedin'] + '" target="_blank" rel="noreferrer">LinkedIn</a></div></div></article>')
+        guest_blocks += ('<article class="guest-card"><div><img src="/thumbs/' + g['episode'] + '.jpg" alt=""><p class="badge">Episode ' + html.escape(g['episode']) + '</p><h2 style="margin:0 0 8px;text-transform:uppercase">' + html.escape(g['name']) + '</h2><p class="meta">' + html.escape(g['title']) + ' - ' + html.escape(g['company']) + '</p></div><div>' + g['body'] + '<div class="btns"><a class="btn" href="/episodes/">Find the episode</a><a class="btn ghost" href="' + g['url'] + '" target="_blank" rel="noreferrer">Company</a><a class="btn ghost" href="' + g['linkedin'] + '" target="_blank" rel="noreferrer">LinkedIn</a></div></div></article>')
     guests_page = ('<main class="wrap" style="padding-bottom:72px"><div class="page-hero"><p class="kicker">The list</p><h1>Guests</h1><p class="lede">The contractors, founders and operators who have sat down with Jake and Daniel so far.</p></div><div class="guest-grid">' + guest_blocks + '</div></main>')
     put(DIST / 'guests/index.html', layout('Guests', '/guests/', 'Guests of Behind the Facade.', guests_page))
     pitch = ('<main class="wrap" style="padding-bottom:72px"><div class="page-hero"><p class="kicker">Bookings</p><h1>Be a guest</h1><p class="lede">If you run a construction business, lead a trade, or have a story that is actually useful on site, send it through.</p></div><form name="guest" method="POST" data-netlify="true" netlify-honeypot="bot-field"><input type="hidden" name="form-name" value="guest"><p style="display:none"><label>Do not fill this out <input name="bot-field"></label></p><label>Name <input type="text" name="name" required></label><label>Email <input type="email" name="email" required></label><label>Company / role <input type="text" name="company"></label><label>Why this conversation <textarea name="pitch" required></textarea></label><button class="btn" type="submit">Send pitch</button></form></main>')
