@@ -52,8 +52,14 @@ label{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--m
 input,textarea{background:var(--bg2);border:1px solid var(--line);padding:12px 14px;color:#fff;width:100%}
 textarea{min-height:140px}
 footer{border-top:1px solid var(--line);padding:36px 0 48px;color:var(--muted);font-size:14px}
-.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
-.foot a{margin-right:14px}
+.foot{display:flex;justify-content:space-between;gap:28px;flex-wrap:wrap;align-items:end}
+.foot-links a{margin-right:14px}
+.subscribe{max-width:360px;margin:0}
+.subscribe label{margin:0}
+.sub-row{display:flex;gap:8px}
+.sub-row input{flex:1;min-width:0}
+.sub-note{margin:8px 0 0;font-size:12px;color:var(--muted);letter-spacing:0;text-transform:none}
+form.subscribe{max-width:360px}
 .guest-grid{display:grid;gap:20px}
 .guest-card{display:grid;grid-template-columns:220px 1fr;gap:24px;background:var(--bg2);border:1px solid var(--line);padding:22px}
 .guest-card img{width:100%;aspect-ratio:16/9;object-fit:cover}
