@@ -58,4 +58,15 @@ footer{border-top:1px solid var(--line);padding:36px 0 48px;color:var(--muted);f
 .guest-card{display:grid;grid-template-columns:220px 1fr;gap:24px;background:var(--bg2);border:1px solid var(--line);padding:22px}
 .guest-card img{width:100%;aspect-ratio:16/9;object-fit:cover}
 .badge{display:inline-block;border:1px solid var(--line);padding:4px 8px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0 0 10px}
+.essay{max-width:680px;margin:0 auto;padding:48px 0 80px}
+.essay h1{text-transform:none;font-size:clamp(28px,4.4vw,46px);line-height:1.12;margin:12px 0 18px}
+.essay p,.essay li{font-size:18px;line-height:1.75;color:#d8d8d8}
+.essay h2{text-transform:none;font-size:22px;margin:36px 0 12px;letter-spacing:0}
+.essay .date{color:var(--muted);letter-spacing:.14em;text-transform:uppercase;font-size:12px}
+.post-list{padding-bottom:72px}
+.post-row{display:block;padding:26px 0;border-bottom:1px solid var(--line)}
+.post-row h2{text-transform:none;font-size:26px;margin:8px 0 10px;line-height:1.2}
+.post-row p{color:var(--soft);margin:0}
+.related{border-top:1px solid var(--line);margin-top:48px;padding-top:8px}
+.related a{display:block;padding:14px 0;border-bottom:1px solid var(--line)}
 @media(max-width:800px){.hero,.latest,.ep,.split,.guest-card{grid-template-columns:1fr}.hero-art{width:180px;height:180px}nav{display:none}}
