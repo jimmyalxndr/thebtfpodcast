@@ -1,18 +1,12 @@
-import base64
+import urllib.request
 from pathlib import Path
 
+HERO_URL = 'https://i.imgur.com/6VoEV7C.jpeg'
+
 def write_hero(dest):
-    parts=[]
-    from hero_0 import P as p0
-    parts.append(p0)
-    from hero_1 import P as p1
-    parts.append(p1)
-    from hero_2 import P as p2
-    parts.append(p2)
-    from hero_3 import P as p3
-    parts.append(p3)
-    from hero_4 import P as p4
-    parts.append(p4)
-    from hero_5 import P as p5
-    parts.append(p5)
-    Path(dest).write_bytes(base64.b64decode(''.join(parts)))
+    req = urllib.request.Request(HERO_URL, headers={'User-Agent': 'thebtfpodcast-site/1.0'})
+    with urllib.request.urlopen(req, timeout=30) as res:
+        data = res.read()
+    if data[:3] != b'\xff\xd8':
+        raise RuntimeError('hero download was not a JPEG')
+    Path(dest).write_bytes(data)
