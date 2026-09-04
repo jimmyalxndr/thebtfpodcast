@@ -3,6 +3,7 @@ from site_config import SHOW, SITE
 
 FONTS = 'https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Syne:wght@700&display=swap'
 HERO = '/hero.jpg'
+FALLBACK = 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2000&q=80'
 
 def layout(title, path, description, body, image='/cover.jpg'):
     abs_img = image if image.startswith('http') else SITE + image
@@ -69,7 +70,7 @@ def render_home(latest, rest, hosts, guests, count):
     )
     return (
         '<main>'
-        '<section class="stage"><div class="stage-bg" style="background-image:url(/hero.jpg)"></div>'
+        '<section class="stage"><div class="stage-bg" style="background-image:url(/hero.jpg),url(' + FALLBACK + ')"></div>'
         '<div class="stage-shade"></div><div class="wrap stage-copy">'
         '<p class="kicker">Melbourne construction podcast</p>'
         '<h1>The conversations<br>behind the work.</h1>'
