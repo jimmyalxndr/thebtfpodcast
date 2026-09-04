@@ -104,6 +104,11 @@ def build():
     req = urllib.request.Request(COVER_URL, headers={'User-Agent': 'thebtfpodcast-site/1.0'})
     with urllib.request.urlopen(req, timeout=30) as res:
         (DIST / 'cover.jpg').write_bytes(res.read())
+    try:
+        from hero_join import write_hero
+        write_hero(DIST / 'hero.jpg')
+    except Exception as err:
+        print('hero.jpg skipped:', err)
     (DIST / 'styles.css').write_text(CSS, encoding='utf-8')
     episodes = fetch()
     thumbs = DIST / 'thumbs'
