@@ -1,8 +1,8 @@
 import html
 from site_config import SHOW, SITE
 
-FONTS = 'https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@300;400;500;600&family=Syne:wght@700&display=swap'
-HERO = 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2000&q=80'
+FONTS = 'https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Syne:wght@700&display=swap'
+HERO = '/hero.jpg'
 
 def layout(title, path, description, body, image='/cover.jpg'):
     abs_img = image if image.startswith('http') else SITE + image
@@ -63,13 +63,13 @@ def render_home(latest, rest, hosts, guests, count):
         '<div class="body"><p class="meta">The hosts</p><h3>Jake and Daniel</h3>'
         '<p>Proline and Complex Facade. Two contractors, one fortnightly conversation.</p></div></a>'
         '<a class="pillar" href="/articles/">'
-        '<img src="' + HERO + '" alt="">'
+        '<img src="/hero.jpg" alt="">'
         '<div class="body"><p class="meta">Field notes</p><h3>Quiet reading on the work</h3>'
         '<p>Pipeline, labour, packages and the numbers behind the week.</p></div></a>'
     )
     return (
         '<main>'
-        '<section class="stage"><div class="stage-bg" style="background-image:url(' + HERO + ')"></div>'
+        '<section class="stage"><div class="stage-bg" style="background-image:url(/hero.jpg)"></div>'
         '<div class="stage-shade"></div><div class="wrap stage-copy">'
         '<p class="kicker">Melbourne construction podcast</p>'
         '<h1>The conversations<br>behind the work.</h1>'
