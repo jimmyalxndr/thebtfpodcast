@@ -1,4 +1,53 @@
 POSTS_A = [
+    {'slug': 'nouri-concrete-city-reliable-crews',
+     'date': '2026-09-21',
+     'title': 'Nouri on the cost of a crew that does not turn up.',
+     'deck': 'A difficult pour helped shape the idea behind CreteMate. In Episode 12, Nouri explains what '
+             'unreliable labour means for the people left on site.',
+     'tags': ['People', 'Concrete City'],
+     'body': '<p>In Episode 12 of Behind the Facade, Nouri from Concrete City describes a 1,500-square-metre '
+             'pour where eight booked workers failed to arrive. Seven people were left to get through the job. '
+             'He remembers it as one of the hardest pours of his career.</p><p>For the crew on site, an '
+             'unanswered phone becomes more work. The concrete still needs placing and finishing, and the people '
+             'who arrived have to carry the shortfall.</p><p>Nouri connects experiences like this with the '
+             'thinking behind CreteMate, his platform for connecting concrete businesses and workers. Profiles, '
+             'ratings and reviews are intended to give both sides more information about who they are working '
+             'with.</p><h2>What a booking needs to tell you</h2><p>A name in the diary leaves plenty unanswered. '
+             'Who has confirmed? What experience do they bring? Who is checking that the crew understands the '
+             'start time, location and work involved?</p><p>Those are useful questions for any contractor '
+             "arranging labour. A platform can help make a worker's history visible. The business still has to "
+             "decide whether that person suits the job and what happens if the crew is short.</p><p>Nouri's "
+             'wider story is about the effort behind running Concrete City: early starts, full days on the tools '
+             'and evenings managing the business. His account of that pour makes the labour problem concrete. '
+             'When a booking falls through, the cost lands on someone already working.</p><p><a '
+             'href="/episodes/12-from-labourer-to-building-a-concrete-empire-nouri-concrete-city-cretemate/">Watch '
+             'Episode 12 with Nouri from Concrete City and CreteMate.</a></p>'},
+    {'slug': 'damien-quinn-understand-the-work-before-automating-it',
+     'date': '2026-09-21',
+     'title': 'Damien Quinn on doing the work before automating it.',
+     'deck': 'After almost 15 years at Multiplex, Damien Quinn moved into construction software. His '
+             'conversation with Jake and Daniel returns to a practical starting point: understand the process '
+             'yourself.',
+     'tags': ['Systems', 'Visibuild'],
+     'body': '<p>Damien Quinn brought almost 15 years of experience at Multiplex into building Visibuild. In '
+             'Episode 11 of Behind the Facade, he talks about moving from managing construction sites to '
+             'starting a software company, and why knowing the work helped him make that transition.</p><p>One '
+             'thread runs through the conversation: do things manually first, then work out what to automate. '
+             'Before a system can save time, someone needs to understand the steps, the decisions and the points '
+             'where people get stuck.</p><h2>Start with one recurring task</h2><p>For a trade business, that '
+             'might be a site report, a handover or the way an issue gets passed from the crew to the office. '
+             'Follow one example from start to finish. What information did someone need? Who supplied it? Where '
+             'did the next person have to chase an answer?</p><p>That exercise gives a business something '
+             'specific to improve. It also makes a software decision easier to assess: can the tool handle the '
+             'actual process, including the awkward cases, and can the people doing the work use it?</p><p>These '
+             "are practical questions to take from Damien's discussion. Automating a task still requires someone "
+             'to decide what a complete result looks like and who acts on it.</p><h2>Keep site experience in the '
+             'conversation</h2><p>Damien discusses construction experience as an advantage in building '
+             'technology for the industry. People who have carried responsibility on site know where an '
+             'apparently small delay can hold up the next step. Bringing that knowledge into the design of a '
+             'system gives it a clearer job to do.</p><p><a '
+             'href="/episodes/11-leaving-australia-s-biggest-builder-to-start-a-software-company-damien-quinn-vis/">Watch '
+             'Episode 11 with Damien Quinn from Visibuild.</a></p>'},
     {
         'slug': 'july-approvals-and-the-job-you-already-have',
         'date': '2026-09-02',
