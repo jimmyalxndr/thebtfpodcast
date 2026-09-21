@@ -10,6 +10,7 @@ YOUTUBE = {
     '9': 'jGg2pxO2dJc',
     '10': 'gAfFUwoGRfs',
     '11': 'fu_dPg9gH2I',
+    '12': 'mA-DXs253io',
 }
 
 def A(kicker, headline, deck, takes, body):
@@ -60,4 +61,8 @@ ARTICLES = {
         'Fifteen years with one of Australia\'s biggest builders, then a software company.',
         ['Damien spent about 15 years at Multiplex including Sapphire Apartments, Shangri-La and Monash.', 'Visibuild is used on large Australian projects including data centres.'],
         '<p>Damien Quinn is co-founder and CEO of Visibuild. He left Multiplex because quality tools on site were still paper and hope. Visibuild later raised $6.6 million from Skip Capital.</p>'),
+    '12': A('Guest: Nouri', 'Nouri on building Concrete City and the problem behind CreteMate',
+        'From labourer to business owner, with full days on the tools and the office work still waiting at night.',
+        ['Nouri talks about early starts, managing crews and learning the business side of concreting.', 'Unreliable labour helped drive the idea for CreteMate, connecting businesses and workers through profiles, ratings and reviews.', 'The conversation covers developing younger workers, sharing techniques and the personal cost of building a business.'],
+        '<p>Nouri from Concrete City and founder of CreteMate joins Jake and Daniel for Episode 12. He talks about finding concreting after trying different trades, building a business and staying on the tools as it grows.</p><p>A difficult pour with workers failing to show up exposed a problem he wanted to solve. CreteMate grew from that experience. The conversation also covers building a personal brand, teaching other concreters and the sacrifices behind the work.</p>'),
 }

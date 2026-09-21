@@ -53,4 +53,14 @@ GUESTS = [
         'summary': 'Former Multiplex senior project manager who left a 15-year builder career to start Visibuild.</p>',
         'body': '<p>Damien Quinn spent about 15 years at Multiplex after earlier years in his father\'s business, Wimbledon Homes. He left because quality tools on site were still paper and hope. Visibuild has since raised $6.6 million from Skip Capital and is used on major Australian projects including data centres.</p>',
     },
+    {
+        'name': 'Nouri',
+        'company': 'Concrete City / CreteMate',
+        'title': 'Concrete City business owner and CreteMate founder',
+        'episode': '12',
+        'url': 'https://www.cretemate.com/',
+        'instagram': 'https://www.instagram.com/concretecityconstruction/',
+        'summary': 'Built Concrete City from the tools and founded CreteMate to help concrete businesses find workers.',
+        'body': '<p>Nouri runs Concrete City and is the founder of CreteMate, a platform connecting concrete businesses with workers. He came into concreting after trying different jobs and trades.</p><p>On Behind the Facade he talks about early starts, managing crews, building a personal brand and the labour problems that led him to create CreteMate.</p>',
+    },
 ]
