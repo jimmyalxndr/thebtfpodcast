@@ -63,4 +63,14 @@ GUESTS = [
         'summary': 'Built Concrete City from the tools and founded CreteMate to help concrete businesses find workers.',
         'body': '<p>Nouri runs Concrete City and is the founder of CreteMate, a platform connecting concrete businesses with workers. He came into concreting after trying different jobs and trades.</p><p>On Behind the Facade he talks about early starts, managing crews, building a personal brand and the labour problems that led him to create CreteMate.</p>',
     },
+    {
+        'name': 'Aron Little',
+        'company': 'A2Z Traffic Management',
+        'title': 'Director',
+        'episode': '13',
+        'url': 'https://a2ztraffic.com.au/',
+        'linkedin': 'https://au.linkedin.com/in/aron-little-5655002a4',
+        'summary': 'Qualified bricklayer who moved into traffic management and built A2Z into a business with around 50 staff.',
+        'body': '<p>Aron Little is Director of A2Z Traffic Management. His path into the industry took him from bricklaying through earthmoving, trucks and other business ventures before he started A2Z.</p><p>On Behind the Facade he talks about growing a team, learning through setbacks, protecting culture and using systems to improve accountability while staying close to the work on site.</p>',
+    },
 ]

@@ -11,6 +11,7 @@ YOUTUBE = {
     '10': 'gAfFUwoGRfs',
     '11': 'fu_dPg9gH2I',
     '12': 'mA-DXs253io',
+    '13': 'KeHdaO7dUnU',
 }
 
 def A(kicker, headline, deck, takes, body):
@@ -65,4 +66,8 @@ ARTICLES = {
         'From labourer to business owner, with full days on the tools and the office work still waiting at night.',
         ['Nouri talks about early starts, managing crews and learning the business side of concreting.', 'Unreliable labour helped drive the idea for CreteMate, connecting businesses and workers through profiles, ratings and reviews.', 'The conversation covers developing younger workers, sharing techniques and the personal cost of building a business.'],
         '<p>Nouri from Concrete City and founder of CreteMate joins Jake and Daniel for Episode 12. He talks about finding concreting after trying different trades, building a business and staying on the tools as it grows.</p><p>A difficult pour with workers failing to show up exposed a problem he wanted to solve. CreteMate grew from that experience. The conversation also covers building a personal brand, teaching other concreters and the sacrifices behind the work.</p>'),
+    '13': A('Guest: Aron Little', 'Aron Little on building A2Z Traffic and learning to lead a growing business',
+        'From bricklaying to traffic management, with lessons in people, systems and staying close to the work.',
+        ['Aron describes growing A2Z Traffic Management to around 50 staff and 30 vehicles.', 'The conversation covers relationships, reputation and learning through difficult periods in business.', 'Aron explains how he uses systems and AI to improve accountability while staying involved on site.'],
+        '<p>Aron Little, Director of A2Z Traffic Management, joins Jake and Daniel for Episode 13. He talks about leaving school young, qualifying as a bricklayer and finding his way into traffic management after working across several businesses.</p><p>The conversation follows the challenges of growing a team, backing young people and building a business that can operate beyond its owner. Aron shares his approach to service, culture and moving between the office and the front line.</p>'),
 }
