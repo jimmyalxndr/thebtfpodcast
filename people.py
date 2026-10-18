@@ -73,4 +73,14 @@ GUESTS = [
         'summary': 'Qualified bricklayer who moved into traffic management and built A2Z into a business with around 50 staff.',
         'body': '<p>Aron Little is Director of A2Z Traffic Management. His path into the industry took him from bricklaying through earthmoving, trucks and other business ventures before he started A2Z.</p><p>On Behind the Facade he talks about growing a team, learning through setbacks, protecting culture and using systems to improve accountability while staying close to the work on site.</p>',
     },
+    {
+        'name': 'Irene Tartiris',
+        'company': 'Hamilton Marino',
+        'title': 'Senior Project Coordinator',
+        'episode': '14',
+        'url': 'https://hamiltonmarino.com.au/',
+        'linkedin': 'https://au.linkedin.com/in/irene-tartiris-643b00157',
+        'summary': 'Architecture graduate and senior project coordinator sharing her experience of career progression and supporting women in construction.',
+        'body': '<p>Irene Tartiris moved from Greece to Australia at 11, studied architecture and found her first construction opportunity by reaching out to builders. Her career has taken her from residential work into larger commercial projects, including finishes coordination at Mirvac.</p><p>On Behind the Facade she talks about earning respect on site, setting boundaries, finding mentors and supporting younger women as she works towards becoming a project manager.</p>',
+    },
 ]

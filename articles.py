@@ -12,6 +12,7 @@ YOUTUBE = {
     '11': 'fu_dPg9gH2I',
     '12': 'mA-DXs253io',
     '13': 'KeHdaO7dUnU',
+    '14': 'DPqCCV0mvYc',
 }
 
 def A(kicker, headline, deck, takes, body):
@@ -70,4 +71,8 @@ ARTICLES = {
         'From bricklaying to traffic management, with lessons in people, systems and staying close to the work.',
         ['Aron describes growing A2Z Traffic Management to around 50 staff and 30 vehicles.', 'The conversation covers relationships, reputation and learning through difficult periods in business.', 'Aron explains how he uses systems and AI to improve accountability while staying involved on site.'],
         '<p>Aron Little, Director of A2Z Traffic Management, joins Jake and Daniel for Episode 13. He talks about leaving school young, qualifying as a bricklayer and finding his way into traffic management after working across several businesses.</p><p>The conversation follows the challenges of growing a team, backing young people and building a business that can operate beyond its owner. Aron shares his approach to service, culture and moving between the office and the front line.</p>'),
+    '14': A('Guest: Irene Tartiris', 'Irene Tartiris on women in construction, respect on site and career progression',
+        'From moving to Australia at 11 to coordinating commercial projects, with lessons in mentorship, boundaries and backing yourself.',
+        ['Irene shares her path from architecture studies into residential and commercial construction.', 'The conversation covers project coordination, managing pressure and the support that helps people grow.', 'Irene discusses setting boundaries on site, mentoring younger women and working towards project management.'],
+        '<p>Irene Tartiris joins Jake and Daniel for Episode 14. She talks about moving from Greece to Australia without speaking English, studying architecture and reaching out to builders to find her first opportunity in construction.</p><p>From coordinating finishes at Mirvac to progressing into a senior project coordinator role, Irene shares the challenges and support behind her career. The conversation explores respect on site, leadership, mentorship and the personal sacrifices that come with ambition.</p>'),
 }
