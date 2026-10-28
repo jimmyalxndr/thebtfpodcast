@@ -13,6 +13,7 @@ YOUTUBE = {
     '12': 'mA-DXs253io',
     '13': 'KeHdaO7dUnU',
     '14': 'DPqCCV0mvYc',
+    '15': 'iL2_ngI3eC8',
 }
 
 def A(kicker, headline, deck, takes, body):
@@ -75,4 +76,8 @@ ARTICLES = {
         'From moving to Australia at 11 to coordinating commercial projects, with lessons in mentorship, boundaries and backing yourself.',
         ['Irene shares her path from architecture studies into residential and commercial construction.', 'The conversation covers project coordination, managing pressure and the support that helps people grow.', 'Irene discusses setting boundaries on site, mentoring younger women and working towards project management.'],
         '<p>Irene Tartiris joins Jake and Daniel for Episode 14. She talks about moving from Greece to Australia without speaking English, studying architecture and reaching out to builders to find her first opportunity in construction.</p><p>From coordinating finishes at Mirvac to progressing into a senior project coordinator role, Irene shares the challenges and support behind her career. The conversation explores respect on site, leadership, mentorship and the personal sacrifices that come with ambition.</p>'),
+    '15': A('The early years', 'We were losing money just to go to work',
+        'Jake and Daniel bring old photos and talk through what the first years actually cost.',
+        ['Jake opens on his February 2006 red induction card. There is no quick way to the top. It takes time and reps.', 'Daniel\'s September 2012 photo, sitting on a roof with a bucket, is the day he nearly walked away from Complex to become a PT until Matty talked him round.', 'At 22, with a nine month old daughter and a house he could not afford, Jake moved into his factory in East Keilor and was losing money just to go to work.', 'Jake tells the story of the van he bought off his old man for $1,000, and of Ryan, who worked six weeks without pay and is now his construction manager on a $1 billion hospital job.'],
+        '<p>Jake Gorry from Proline Group and Daniel Alizzi from Complex Facade Install sit down without a guest. Each of them brought a stack of old photos on an iPad, picked one of the other\'s, and asked for the story behind it.</p><p>Jake opens with his original red induction card from February 2006. There is no quick way to the top. His January 2017 photo is the move into a factory in East Keilor. He was 22, with a nine month old daughter and a house he could not afford, and he was losing money just to go to work. Daniel\'s first photo is from September 2012, sitting on a roof with a bucket. That was the day he nearly walked away from Complex to become a PT, until Matty talked him round. They stay with those years. Jake talks about the van he bought off his old man for $1,000. A Friday invoice went in at 3:30 PM and was paid by 5 PM. Daniel wrote "you will not outwork me" in his notebook after moving to Queensland at 26.</p>'),
 }
