@@ -14,6 +14,7 @@ YOUTUBE = {
     '13': 'KeHdaO7dUnU',
     '14': 'DPqCCV0mvYc',
     '15': 'iL2_ngI3eC8',
+    '16': '93toSIAvpME',
 }
 
 def A(kicker, headline, deck, takes, body):
@@ -80,4 +81,8 @@ ARTICLES = {
         'Jake and Daniel bring old photos and talk through what the first years actually cost.',
         ['Jake opens on his February 2006 red induction card. There is no quick way to the top. It takes time and reps.', 'Daniel\'s September 2012 photo, sitting on a roof with a bucket, is the day he nearly walked away from Complex to become a PT until Matty talked him round.', 'At 22, with a nine month old daughter and a house he could not afford, Jake moved into his factory in East Keilor and was losing money just to go to work.', 'Jake tells the story of the van he bought off his old man for $1,000, and of Ryan, who worked six weeks without pay and is now his construction manager on a $1 billion hospital job.'],
         '<p>Jake Gorry from Proline Group and Daniel Alizzi from Complex Facade Install sit down without a guest. Each of them brought a stack of old photos on an iPad, picked one of the other\'s, and asked for the story behind it.</p><p>Jake opens with his original red induction card from February 2006. There is no quick way to the top. His January 2017 photo is the move into a factory in East Keilor. He was 22, with a nine month old daughter and a house he could not afford, and he was losing money just to go to work. Daniel\'s first photo is from September 2012, sitting on a roof with a bucket. That was the day he nearly walked away from Complex to become a PT, until Matty talked him round. They stay with those years. Jake talks about the van he bought off his old man for $1,000. A Friday invoice went in at 3:30 PM and was paid by 5 PM. Daniel wrote "you will not outwork me" in his notebook after moving to Queensland at 26.</p>'),
+    '16': A('Guest: Josh Griffiths', 'Josh Griffiths on big Melbourne jobs, Ironman training and two brain surgeries',
+        'From starting at Multiplex at 19 to Director of Construction at PDG, with an Ironman and two rounds of brain surgery along the way.',
+        ['Josh shares his path from Multiplex at 19 to project manager on 80 Collins Street at 26.', 'He talks about his first mentor, Ben Hawker, and the week he slept under his desk to finish a handover.', 'After his last Ironman in 2024 he had two rounds of brain surgery in 10 months, and kept handing over the keys.'],
+        '<p>Josh Griffiths joins Jake and Daniel for Episode 16. He talks about starting at Multiplex at 19, just out of school and working on projects around the $500 million mark, then becoming project manager on 80 Collins Street at 26.</p><p>Now Director of Construction at PDG, he talks about taking on an Ironman through long weeks on a tower. After his last one in 2024 he went from the fittest he had ever been to two rounds of brain surgery in 10 months, and he was still handing over the keys.</p>'),
 }
