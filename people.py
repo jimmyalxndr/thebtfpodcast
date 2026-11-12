@@ -83,4 +83,14 @@ GUESTS = [
         'summary': 'Architecture graduate and senior project coordinator sharing her experience of career progression and supporting women in construction.',
         'body': '<p>Irene Tartiris moved from Greece to Australia at 11, studied architecture and found her first construction opportunity by reaching out to builders. Her career has taken her from residential work into larger commercial projects, including finishes coordination at Mirvac.</p><p>On Behind the Facade she talks about earning respect on site, setting boundaries, finding mentors and supporting younger women as she works towards becoming a project manager.</p>',
     },
+    {
+        'name': 'Josh Griffiths',
+        'company': 'PDG',
+        'title': 'Director of Construction',
+        'episode': '16',
+        'url': 'https://pdg.com.au/',
+        'linkedin': 'https://www.linkedin.com/in/josh-griffiths-417615a8',
+        'summary': 'Director of Construction at PDG who started at Multiplex at 19 and has delivered some of Melbourne\'s biggest jobs.',
+        'body': '<p>Josh Griffiths started at Multiplex at 19, just out of school, on projects around the $500 million mark. At 26 he was project manager on 80 Collins Street, a $500 or $600 million job with around 50 staff. He is now Director of Construction at PDG.</p><p>On Behind the Facade he talks about his first mentor, Ben Hawker, and the week he slept under his desk at Collins Square to finish a handover. After his last Ironman in 2024 he had two rounds of brain surgery in 10 months, and he was still handing over the keys.</p>',
+    },
 ]
